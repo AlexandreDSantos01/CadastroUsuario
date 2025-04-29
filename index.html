@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
+    <title>Cadastro de Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+     <form action="#" method="post">
+        <h1>Cadastro de Usuário</h1>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="estado-civil">Estado Civil:</label>
+        <select id="estado-civil" name="estado-civil" required>
+            <option value="">Selecione</option>
+            <option value="solteiro">Solteiro(a)</option>
+            <option value="casado">Casado(a)</option>
+            <option value="divorciado">Divorciado(a)</option>
+            <option value="viuvo">Viúvo(a)</option>
+        </select>
+    
+        <label>Sexo:</label>
+        <label><input type="radio" name="sexo" value="masculino" required> Masculino</label>
+        <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+        <label><input type="radio" name="sexo" value="outro"> Outro</label>
+    
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required min="0">
+    
+        <button type="submit">Cadastrar</button>
+
+        <img src="MMeioaAF_02.png" alt="Logo" style="width: 200px; height: auto; margin-bottom: 2rem;">
+     </form>
+   </div>
+
+    <script>
+        function confirmarCadastro(event) {
+          event.preventDefault(); // impede o envio real do formulário
+          alert("Cadastro realizado com sucesso!");
+          // Aqui você pode futuramente salvar os dados ou redirecionar
+        }
+      
+        // Associa a função ao envio do formulário
+        document.querySelector("form").addEventListener("submit", confirmarCadastro);
+    </script>
+
+</body>
+</html>
